@@ -69,6 +69,7 @@ class Car extends Factory {
 
 class Sport extends Car {
   constructor(model, trim, transmission, top, color, seatstrim, audio, wheelstrim) {
+    super()
     this.model = model
     this.trim = trim
     this.transmission = transmission
@@ -111,7 +112,6 @@ class Truck extends Factory {
 // MAZDA3 MASS PRODUCTION
 // Create an instance  Car.
 
-
 // The following properties must be specified: model (mazda3), color (red), enginetype (hybrid), transmission (automatic), trim (touring), wheels (base), audio (premium), seats (leather), and moonroof (true)
 
 // Write your 'mazda3' instance below:
@@ -127,16 +127,10 @@ console.log(Mazda3)
 
 console.log(Mazda3.massBuild(35000));
 
-
-
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
-
-// console.log(mazda3.customerBuild('yellow', ['weather package', 'satellite radio', 'rear spoiler']));
-
-// console.log(mazda3.customerBuild('yellow', ['weather package', 'satellite radio', 'rear spoiler']));
-
+console.log(Mazda3.customerBuild("yellow", ["weather package", "satellite radio", "rear spoiler"]));
 
 
 // MIATA-RF MASS PRODUCTION
@@ -145,32 +139,24 @@ console.log(Mazda3.massBuild(35000));
 
 // Write your 'miataRf' instance below:
 // Write your code below:
-
-
-
-
+let miataRf = new Sport ("Miata-RF", "Grand Touring", "manual", "hard top", "red", "leather", "premium", "premium")
 
 // Print miataRf. It should have all of the above properties. Plus, the extended warranty.
 // Write your code below:
 
-
-
-
+console.log(miataRf);
 
 // Print miataRf, calling massBuild(), building 15,000
 // It should print: "Building 15000 Red Grand Touring Miata-RF's."
 // Write your code below:
 
-
-
-
+console.log(miataRf.massBuild(15000));
 
 // Print miataRf, calling customerBuild(), building one black Miata-Rf with the following options, as an array: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control.
 // It should read: "Building one black Grand Touring Miata-RF with the following options: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control"
 // Write your code below:
 
-
-
+console.log(miataRf.customerBuild("black", ["hid headlights", "sports suspension", "leather steering wheel", "heated seats", "adaptive cruise control"]));
 
 // TRAIL BLAZER MASS PRODUCTION
 // The Trail Blazer should inherit from truck.
@@ -178,6 +164,8 @@ console.log(Mazda3.massBuild(35000));
 
 // Write your 'trailBlazer' instance below:
 // Write your code below:
+
+let trailBlazer = new Truck 
 
 
 
