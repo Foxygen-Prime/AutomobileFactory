@@ -94,16 +94,18 @@ class Sport extends Car {
 // It should also inherit the warranty property so we can extend it to: 150,000 miles / 6 years.
 // Write your code below:
 class Truck extends Factory {
-  constructor(model, trim, transmission, top, color, seatstrim, audio, wheelstrim) {
+  constructor(model, color, enginesize, hitch, bed, navigation, trim, transmission, audio, wheelstrim, doors) {
     super()
     this.model = model
     this.color = color
     this.enginesize = enginesize
     this.hitch = hitch
+    this.trim = trim
     this.bed = bed
     this.navigation = navigation
     this.backupcamera = true
     this.audio = "basic"
+    this.doors = doors
     this.warranty = "150,000 miles / 6 years"
   }
 }
@@ -165,26 +167,20 @@ console.log(miataRf.customerBuild("black", ["hid headlights", "sports suspension
 // Write your 'trailBlazer' instance below:
 // Write your code below:
 
-let trailBlazer = new Truck 
-
-
-
-
+let trailBlazer = new Truck ("Trail Blazer", "blue", 8, true, "Sport", "standard", true, 2);
 
 // Print trailBlazer. It should have all the above properties. Plus, the extended warranty.
 // Write your code below:
 
-
-
+console.log(trailBlazer);
 
 // Print trailBlazer, calling massBuid(). It should build 35000 trucks.
 // It should print: "Building 35000 blue Sport Trail Blazer's."
 // Wrint your code below:
-
-
-
-
+console.log(trailBlazer.massBuild(35000));
 
 // Print trailBlazer, calling customerBuild(). It should build a red Trail Blazer with the following options, as an array: seat warmers, tinted windows, fog lamps.
 // It should print: "Building one red Sport Trail Blazer with the following options: seat warmers, tinted windows, fog lamps"
 // Write your code below:
+
+console.log(trailBlazer.customerBuild("red", ["seat warmers", "tinted windows", "fog lamps"]));
