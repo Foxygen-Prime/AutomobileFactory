@@ -94,7 +94,7 @@ class Sport extends Car {
 // It should also inherit the warranty property so we can extend it to: 150,000 miles / 6 years.
 // Write your code below:
 class Truck extends Factory {
-  constructor(model, color, enginesize, hitch, bed, navigation, trim, transmission, audio, wheelstrim, doors) {
+  constructor(model, color, enginesize, hitch, bed, navigation, doors = 2, trim = "Sport") {
     super()
     this.model = model
     this.color = color
@@ -118,7 +118,7 @@ class Truck extends Factory {
 
 // Write your 'mazda3' instance below:
 
-let Mazda3 = new Car ("mazda3","red","hybrid","automatic","touring","base","premium","leather",true)
+let Mazda3 = new Car ("mazda3",4,"red","hybrid","automatic","touring","base","premium","leather",true)
 // Print mazda3. I should have all the above properties.
 // Write your code below:
 console.log(Mazda3)
@@ -167,7 +167,7 @@ console.log(miataRf.customerBuild("black", ["hid headlights", "sports suspension
 // Write your 'trailBlazer' instance below:
 // Write your code below:
 
-let trailBlazer = new Truck ("Trail Blazer", "blue", 8, true, "Sport", "standard", true, 2);
+let trailBlazer = new Truck ("Trail Blazer", "blue", 8, true, "standard", true, doors = 2);
 
 // Print trailBlazer. It should have all the above properties. Plus, the extended warranty.
 // Write your code below:
